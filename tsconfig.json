@@ -20,8 +20,5 @@
     },
     "allowImportingTsExtensions": true,
     "jsx": "react-jsx"
-  },
-  "linterOptions": {
-    "exclude": ["src"]
   }
 }
