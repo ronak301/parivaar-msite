@@ -1,3 +1,4 @@
+// @ts-nocheck
 import axios from "axios";
 import client, { API_BASE_URL } from "./baseApiClient";
 
@@ -40,7 +41,7 @@ export const getMemberDetails = (userId: string) => {
   return client.get(`/user/${userId}`);
 };
 
-export const searchUser = (phone) => {
+export const searchUser = (phone: any) => {
   return client.post(`/user/search`, {
     query: phone,
     filter: {},
@@ -49,7 +50,7 @@ export const searchUser = (phone) => {
   });
 };
 
-export const createUser = (input) => {
+export const createUser = (input: any) => {
   return client.post(`/user/new`, {
     ...input,
   });

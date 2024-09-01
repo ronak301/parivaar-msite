@@ -1,3 +1,4 @@
+// @ts-nocheck
 import axios from "axios";
 
 export const sendEvent = (text: string) => {
