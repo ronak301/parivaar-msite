@@ -4,7 +4,6 @@ import React from "react";
 import { MdSearch, MdCancel } from "react-icons/md";
 
 export default function SearchInput({ query, onChange, onClear }) {
-  console.log("query", query);
   return (
     <Box flexDirection={"row"} alignItems={"center"}>
       <Input
