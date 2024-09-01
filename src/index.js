@@ -3,8 +3,10 @@ import ReactDOM from "react-dom/client";
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
 import App from "./app/App.tsx";
+import { Provider } from "react-redux";
 
 import { extendTheme } from "@chakra-ui/react";
+import { store } from "./app/store.ts";
 
 Box.defaultProps = {
   display: "flex",
@@ -46,9 +48,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
     </ChakraProvider>
   </React.StrictMode>
 );
